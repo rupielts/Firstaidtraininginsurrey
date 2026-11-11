@@ -1,0 +1,6 @@
+SETUP (about 30 minutes)
+1. Email alerts: create a free key at web3forms.com using info@rupielts.com, then paste it into site.js where it says PASTE_WEB3FORMS_KEY_HERE.
+2. Hosting: upload this folder to Cloudflare Pages or Netlify (both have free plans), then connect firstaidtraininginsurrey.com.
+3. Search engines: add the site to Google Search Console and Bing Webmaster Tools and submit /sitemap.xml.
+4. Local: create a Google Business Profile and Bing Places listing using exactly: 112-8232 120 St, Surrey, BC / 604-825-8882.
+5. Check course lengths, prices (add GST if you want it shown) and course content against your Red Cross course outline. Add class dates when ready.

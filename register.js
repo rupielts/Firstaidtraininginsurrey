@@ -8,13 +8,13 @@ m.innerHTML='<div class="sheet" role="dialog" aria-modal="true" aria-labelledby=
 document.body.appendChild(m);
 m.addEventListener("click",function(e){if(e.target===m)hide()});
 m.querySelector("button").addEventListener("click",hide);}
-function show(c,t){
+function show(c,t,u){
 if(!m)build();
 m.querySelector("#mt").textContent="Register: "+c;
 var b=m.querySelector(".mbody");b.innerHTML="<p>Loading the form...</p>";
-var f=document.createElement("iframe");f.src=EMBED;f.title="Course registration form";b.appendChild(f);
+var f=document.createElement("iframe");f.src=u||EMBED;f.title="Course registration form";b.appendChild(f);
 m.hidden=false;document.body.style.overflow="hidden";last=t;m.querySelector("button").focus();}
 function hide(){m.hidden=true;m.querySelector(".mbody").innerHTML="";document.body.style.overflow="";if(last)last.focus();}
-document.addEventListener("click",function(e){var a=e.target.closest("[data-course]");if(!a)return;e.preventDefault();show(a.dataset.course,a);});
+document.addEventListener("click",function(e){var a=e.target.closest("[data-course]");if(!a)return;e.preventDefault();show(a.dataset.course,a,a.getAttribute("data-url"));});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m&&!m.hidden)hide();});
 })();
